@@ -42,8 +42,15 @@ class ListApp
         @list.check_item(indice)
         puts "Articulo fue chequeado correctamente."
       when '5'
-        @list.remove_all
-        puts "Se removieron todos los articulos."
+        print "Esta seguro que quiere borrar todos los articulos (s/n): "
+        confir = gets.chomp
+        if confir == 's'
+          @list.remove_all
+          puts "Se removieron todos los articulos."
+        else
+          puts "Operacion cancelada."
+        end
+
       when '6'
         puts "Gracias por utilizar nuestra aplicacion."
         break
