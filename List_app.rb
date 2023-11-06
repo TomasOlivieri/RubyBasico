@@ -22,6 +22,16 @@ class ListApp
       opcion = gets.chomp
 
       case (opcion)
+      when '1'
+        print "Ingrese el articulo: "
+        texto = gets.chomp
+        @list.add_item(texto)
+        puts "Articulo ingresado correctamente"
+      when '2'
+      when '3'
+        @list.show_all
+      when '4'
+      when '5'
       when '6'
         puts "Gracias por utilizar nuestra aplicacion."
         break
@@ -30,7 +40,5 @@ class ListApp
   end
 end
 
-
 listapp = ListApp.new
-
 listapp.run
