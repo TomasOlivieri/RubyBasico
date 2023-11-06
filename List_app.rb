@@ -26,17 +26,24 @@ class ListApp
         print "Ingrese el articulo: "
         texto = gets.chomp
         @list.add_item(texto)
-        puts "Articulo ingresado correctamente"
+        puts "Articulo ingresado correctamente."
       when '2'
         @list.show_all
         print "Ingrese el indice a eliminar: "
         indice = gets.to_i
         @list.remove_item(indice)
-        puts "Articulo eliminado correctamente"
+        puts "Articulo eliminado correctamente."
       when '3'
         @list.show_all
       when '4'
+        @list.show_all
+        print "Ingrese el indice del articulo a check: "
+        indice = gets.to_i
+        @list.check_item(indice)
+        puts "Articulo fue chequeado correctamente."
       when '5'
+        @list.remove_all
+        puts "Se removieron todos los articulos."
       when '6'
         puts "Gracias por utilizar nuestra aplicacion."
         break
