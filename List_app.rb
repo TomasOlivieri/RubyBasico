@@ -54,6 +54,8 @@ class ListApp
       when '6'
         puts "Gracias por utilizar nuestra aplicacion."
         break
+      else
+        puts "Opcion invalida."
       end
     end
   end
