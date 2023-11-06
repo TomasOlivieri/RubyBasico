@@ -13,7 +13,7 @@ class List
   end
 
   def remove_item(index)
-    @items.delete(index)
+    @items.delete_at(index)
   end
 
   def check_item(index)

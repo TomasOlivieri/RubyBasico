@@ -28,6 +28,11 @@ class ListApp
         @list.add_item(texto)
         puts "Articulo ingresado correctamente"
       when '2'
+        @list.show_all
+        print "Ingrese el indice a eliminar: "
+        indice = gets.to_i
+        @list.remove_item(indice)
+        puts "Articulo eliminado correctamente"
       when '3'
         @list.show_all
       when '4'
